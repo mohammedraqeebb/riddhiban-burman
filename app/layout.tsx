@@ -3,9 +3,9 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 
 import './globals.css';
-import Header from '@/ui/components/header';
+import Header from '@/ui/components/header/header';
 import { gilroySrc } from '@/assets/fonts/gilroy';
-import Footer from '@/ui/components/footer';
+import Footer from '@/ui/components/footer/footer';
 
 // const gilroy = localFont({ src: '../assets/fonts/Gilroy-Regular.ttf' });
 

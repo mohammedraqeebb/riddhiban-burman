@@ -1,0 +1,66 @@
+.footer_wrapper {
+  display: flex;
+  justify-content: center;
+  color: white;
+  .footer_container {
+    display: flex;
+    align-items: center;
+    max-width: 1512px;
+    background: #111111;
+    width: 100%;
+    border-top-right-radius: 177px;
+    border-top-left-radius: 177px;
+    padding: 96px 84px 0px 84px;
+    .image_container {
+      margin-right: 29px;
+      width: 210px;
+      height: 210px;
+    }
+    .introduction_container {
+      margin-right: 104px;
+      display: flex;
+      flex-direction: column;
+      h2 {
+        font-size: 40px;
+        font-family: GroteskLight;
+        font-weight: 400;
+      }
+      p {
+        font-size: 24px;
+        font-family: GroteskMedium;
+        color: #888888;
+      }
+    }
+    .opportunity_container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      .opportunity {
+        p {
+          font-size: 24px;
+          color: #f1f1f1;
+          font-family: GroteskLight;
+        }
+      }
+      .email_container {
+        width: 350px;
+        border-radius: 24px;
+        height: 46px;
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        align-items: center;
+        text-transform: lowercase;
+        font-weight: bold;
+        display: flex;
+        background: white;
+        padding: 12px 14px 12px 14px;
+        .email {
+          font-size: 18px;
+          color: black;
+          font-family: GroteskSemiBold;
+        }
+      }
+    }
+  }
+}

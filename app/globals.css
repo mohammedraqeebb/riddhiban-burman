@@ -5,3 +5,36 @@
 * {
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: Gilroy;
+  src: url('../assets/fonts/Gilroy-Regular.ttf');
+}
+@font-face {
+  font-family: GilroyBold;
+  src: url('../assets/fonts/Gilroy-Bold.ttf');
+}
+
+@font-face {
+  font-family: GrotestRegular;
+  src: url('../assets/fonts/ClashGrotesk-Regular.ttf');
+}
+
+@font-face {
+  font-family: GroteskSemiBold;
+  src: url('../assets/fonts/ClashGrotesk-Semibold.ttf');
+}
+
+@font-face {
+  font-family: GroteskLight;
+  src: url('../assets/fonts/ClashGrotesk-Light.ttf');
+}
+@font-face {
+  font-family: GroteskMedium;
+  src: url('../assets/fonts/ClashGrotesk-Medium.ttf');
+}
+
+body {
+  background-color: #f1f1f1 !important;
+  font-family: Gilroy;
+}
