@@ -4,7 +4,7 @@ import ProfileImage from '../../../assets/images/profile.png';
 import Image from 'next/image';
 import styles from './Footer.module.scss';
 import { MdContentCopy } from 'react-icons/md';
-import { FaInstagram } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -30,11 +30,18 @@ const Footer = () => {
             </span>
           </div>
           <div className={styles.socials_container}>
-            <p>Socials</p>
-            <div>
-              <p>Linkedin</p>
+            <p className={styles.header}>Socials</p>
+            <div className={styles.socials_tray}>
               <p>
-                <FaInstagram />
+                <span>
+                  <FaLinkedin />
+                </span>
+                Linkedin
+              </p>
+              <p>
+                <span>
+                  <FaInstagram />
+                </span>
                 Instagram
               </p>
             </div>
