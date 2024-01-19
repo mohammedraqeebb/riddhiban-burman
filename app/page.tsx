@@ -2,6 +2,8 @@ import styles from './styles.module.scss';
 import ProfileImage from '../assets/images/home_profile.png';
 import Image from 'next/image';
 import { experienceData, selectedWorksData } from '@/util';
+
+import Link from 'next/link';
 const Page = () => {
   return (
     <div className={styles.page_wrapper}>
@@ -38,10 +40,10 @@ const Page = () => {
           </p>
         </div>
         <div className={styles.records_wrapper}>
-          <p className={styles.header}>
-            relevant <br />
-            experience
-          </p>
+          <div className={styles.header_container}>
+            <p>relevant</p>
+            <p>experience</p>
+          </div>
           <div className={styles.records_container}>
             {experienceData.map((currentExperience, id) => (
               <div key={id} className={styles.record_container}>
@@ -70,7 +72,7 @@ const Page = () => {
             Works
           </p>
           <div className={styles.selected_works_container}>
-            {selectedWorksData.map((curentWord) => (
+            {selectedWorksData.map((curentWord, index) => (
               <div
                 key={curentWord.name}
                 className={styles.selected_work_container}
@@ -88,7 +90,9 @@ const Page = () => {
                       {curentWord.description}
                     </p>
                   </div>
-                  <button className={styles.view_button}>View</button>
+                  <Link href={`/work/${index}`} className={styles.view_button}>
+                    View
+                  </Link>
                 </div>
               </div>
             ))}

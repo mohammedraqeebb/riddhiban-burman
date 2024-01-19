@@ -20,7 +20,7 @@
   src: url('../assets/fonts/Gilroy-ExtraBold.ttf');
 }
 @font-face {
-  font-family: GrotestRegular;
+  font-family: GroteskRegular;
   src: url('../assets/fonts/ClashGrotesk-Regular.ttf');
 }
 @font-face {
@@ -45,4 +45,5 @@
 body {
   background-color: #f1f1f1 !important;
   font-family: Gilroy;
+  overflow-x: hidden;
 }

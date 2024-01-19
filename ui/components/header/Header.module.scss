@@ -4,8 +4,9 @@
   margin-top: 40px;
   height: 46px;
   .header_container {
-    font-size: 22px;
+    font-size: 20px;
     max-width: 1300px;
+    padding: 0 12px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -13,7 +14,7 @@
     text-transform: uppercase;
     .header_left {
       display: flex;
-      gap: 66px;
+      gap: 48px;
       .logo {
         font-weight: bold;
         font-family: GilroyBold;
@@ -27,7 +28,7 @@
         border-radius: 24px;
         display: flex;
         gap: 12px;
-        font-size: 22px;
+        font-size: 20px;
         font-family: GilroyBold;
         justify-content: center;
         align-items: center;
@@ -36,6 +37,151 @@
         display: flex;
         background: white;
         padding: 12px 14px 12px 14px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header_wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+    height: 46px;
+    .header_container {
+      padding: 0 12px;
+      font-size: 16px;
+      max-width: 1300px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-transform: uppercase;
+      .header_left {
+        display: flex;
+        gap: 24px;
+        .logo {
+          font-weight: bold;
+          font-family: GilroyBold;
+        }
+      }
+      .header_right {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        .email_container {
+          border-radius: 24px;
+          display: flex;
+          gap: 12px;
+          font-size: 16px;
+          font-family: GilroyBold;
+          justify-content: center;
+          align-items: center;
+          text-transform: lowercase;
+          font-weight: bold;
+          display: flex;
+          background: white;
+          padding: 12px 14px 12px 14px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 758px) {
+  .header_wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+    height: 46px;
+    .header_container {
+      padding: 0 12px;
+      font-size: 16px;
+      max-width: 1300px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-transform: uppercase;
+      .header_left {
+        display: flex;
+        gap: 24px;
+        .logo {
+          font-weight: bold;
+          font-family: GilroyBold;
+        }
+      }
+      .header_right {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        .connect {
+          display: none;
+        }
+        .email_container {
+          border-radius: 24px;
+          display: flex;
+          gap: 12px;
+          font-size: 16px;
+          font-family: GilroyBold;
+          justify-content: center;
+          align-items: center;
+          text-transform: lowercase;
+          font-weight: bold;
+          display: flex;
+          background: white;
+          padding: 12px 14px 12px 14px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 624px) {
+  .header_wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+    height: 46px;
+    .header_container {
+      padding: 0 12px;
+      font-size: 16px;
+      max-width: 1300px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-transform: uppercase;
+      .header_left {
+        display: flex;
+        gap: 24px;
+        .logo {
+          font-weight: bold;
+          font-family: GilroyBold;
+        }
+      }
+      .header_right {
+        display: none;
+        gap: 18px;
+        align-items: center;
+        .connect {
+          display: none;
+        }
+        .email_container {
+          display: none;
+          border-radius: 24px;
+
+          gap: 12px;
+          font-size: 16px;
+          font-family: GilroyBold;
+          justify-content: center;
+          align-items: center;
+          text-transform: lowercase;
+          font-weight: bold;
+          display: flex;
+          background: white;
+          padding: 12px 14px 12px 14px;
+        }
       }
     }
   }
