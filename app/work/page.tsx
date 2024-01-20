@@ -26,6 +26,7 @@ const page = () => {
                   allowFullScreen
                 ></iframe>
               </div>
+
               <p className={styles.description}>{current.description}</p>
               <ul className={styles.points}>
                 {current.points.map((currentPoint) => (
@@ -68,7 +69,7 @@ const page = () => {
               )}
               {current.secondVideoTitle && (
                 <p
-                  style={{ marginTop: index === 0 ? -100 : 0 }}
+                  id={index === 0 ? 'first' : ''}
                   className={styles.second_heading}
                 >
                   {current.secondVideoTitle}
