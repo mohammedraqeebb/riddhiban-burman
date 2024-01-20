@@ -66,11 +66,10 @@ const Page = () => {
           </div>
         </div>
         <div className={styles.selected_works_wrapper}>
-          <p className={styles.header}>
-            Selected
-            <br />
-            Works
-          </p>
+          <div className={styles.header_container}>
+            <p> Selected</p>
+            <p> Works</p>
+          </div>
           <div className={styles.selected_works_container}>
             {selectedWorksData.map((curentWord, index) => (
               <div

@@ -26,7 +26,7 @@ export const experienceData = [
       'Creating storyboards, Mood boards and animation for advertisements and client films.',
   },
   {
-    companyName: 'Vivi 5 Studio',
+    companyName: 'Studio Eeksaurus ',
     position: '2d Visual Artist',
     duration: '(2019 - 2020)',
     description:
@@ -91,7 +91,11 @@ export const selectedWorksDataInDetail = [
       'Currently we 150 active users using our Asset Dashboard to search for Game assets. ',
       'Developed a scalable solution for updating and refreshing thumbnails, keeping sync with the evolving design trends and user preferences.',
     ],
-    video: '',
+    videos: [
+      'https://player.vimeo.com/video/900335104?h=8d2667225f',
+      'https://player.vimeo.com/video/900335320?h=e9f0c3775a',
+    ],
+    secondVideoTitle: 'Initial UX prototyping for naming the assets.',
   },
   {
     name: '3D Inspirations',
@@ -104,7 +108,8 @@ export const selectedWorksDataInDetail = [
       'Balancing artistic creativity with the practicalities of game development. This required a deep understanding of technical limitations without compromising on the quality of the themes. ',
       'Establish a seamless workflow by creating a robust pipeline for the team. This facilitated smooth transitions of work from one phase to another, ensuring a continuous and efficient production process.',
     ],
-    video: '',
+    videos: ['https://player.vimeo.com/video/899038049?h=92436b20e6'],
+    secondVideoTitle: 'Stages for creating our halloween Theme',
   },
   {
     name: 'Platform Design',
@@ -119,7 +124,12 @@ export const selectedWorksDataInDetail = [
       'Created an unique Leaderboard that focused to healthy competition among friends. ',
       'Currently we have 1000+ Active young users on the Platform.',
     ],
-    video: '',
+    videos: [
+      'https://player.vimeo.com/video/900336252?h=897482b257',
+      'https://player.vimeo.com/video/900335608?h=afe8c98934',
+      'https://player.vimeo.com/video/900335477?h=ef45238179',
+    ],
+    secondVideoTitle: 'Card Selection Ideation',
   },
   {
     name: 'Superhero Platform MVP',
@@ -133,7 +143,11 @@ export const selectedWorksDataInDetail = [
       'Demonstrated adaptability and resilience by understanding the importance of dropping invested ideas for the sake of broader platform growth. ',
       'Gained valuable insights into project management, user experience, and decision-making in dynamic environments',
     ],
-    video: '',
+    videos: [
+      'https://player.vimeo.com/video/901022110?h=e4db2a4290',
+      'https://player.vimeo.com/video/900327669?h=8c31e6fa00',
+    ],
+    secondVideoTitle: 'Game Introduction Using AI',
   },
   {
     name: 'Animation Showreel',
@@ -146,6 +160,6 @@ export const selectedWorksDataInDetail = [
       'I have recently got to work for a Film called PIPPA streaming on Amazon and also worked on Netflix Special Features of our Nation Hero (Yet to be released)',
       'This portfolio section not only showcases my recent animations but also emphasises on my commitment to continuous learning and my passion for 2D animation, making it a compelling testament to my skills and dedication.',
     ],
-    video: '',
+    videos: ['https://player.vimeo.com/video/900334969?h=505dfe1934'],
   },
 ];

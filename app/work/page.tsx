@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './styles.module.scss';
 import { selectedWorksDataInDetail } from '@/util';
+import Halloween from '../../assets/images/halloween.png';
+import Image from 'next/image';
 
 const page = () => {
   return (
@@ -14,10 +16,16 @@ const page = () => {
           </p>
         </div>
         <div className={styles.works_container}>
-          {selectedWorksDataInDetail.map((current) => (
+          {selectedWorksDataInDetail.map((current, index) => (
             <div key={current.name} className={styles.work_container}>
               <p className={styles.work_heading}>{current.name}</p>
-              <div className={styles.video_container}></div>
+              <div className={styles.video_container}>
+                <iframe
+                  title="vimeo-player"
+                  src={current.videos[0]}
+                  allowFullScreen
+                ></iframe>
+              </div>
               <p className={styles.description}>{current.description}</p>
               <ul className={styles.points}>
                 {current.points.map((currentPoint) => (
@@ -26,6 +34,46 @@ const page = () => {
                   </li>
                 ))}
               </ul>
+              {current.videos.length === 2 && (
+                <div className={styles.video_container}>
+                  <iframe
+                    title="vimeo-player"
+                    src={current.videos[1]}
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              )}
+              {current.videos.length === 3 && (
+                <div className={styles.two_video_container}>
+                  <div className={styles.video_one}>
+                    <iframe
+                      title="vimeo-player"
+                      src={current.videos[1]}
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                  <div className={styles.video_two}>
+                    <iframe
+                      title="vimeo-player"
+                      src={current.videos[2]}
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                </div>
+              )}
+              {index === 1 && (
+                <div className={styles.second_image_container}>
+                  <Image src={Halloween} alt={current.name} />
+                </div>
+              )}
+              {current.secondVideoTitle && (
+                <p
+                  style={{ marginTop: index === 0 ? -100 : 0 }}
+                  className={styles.second_heading}
+                >
+                  {current.secondVideoTitle}
+                </p>
+              )}
             </div>
           ))}
         </div>

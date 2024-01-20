@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+iframe {
+  border-radius: 5%;
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+}
+
 @font-face {
   font-family: Gilroy;
   src: url('../assets/fonts/Gilroy-Regular.ttf');
@@ -45,5 +50,5 @@
 body {
   background-color: #f1f1f1 !important;
   font-family: Gilroy;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
