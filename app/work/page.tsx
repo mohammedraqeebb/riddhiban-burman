@@ -36,7 +36,10 @@ const page = () => {
                 ))}
               </ul>
               {current.videos.length === 2 && (
-                <div className={styles.video_container}>
+                <div
+                  className={styles.video_container}
+                  style={{ marginTop: 72 }}
+                >
                   <iframe
                     title="vimeo-player"
                     src={current.videos[1]}
@@ -45,13 +48,17 @@ const page = () => {
                 </div>
               )}
               {current.videos.length === 3 && (
-                <div className={styles.two_video_container}>
+                <div
+                  style={{ marginTop: 72 }}
+                  className={styles.two_video_container}
+                >
                   <div className={styles.video_one}>
                     <iframe
                       title="vimeo-player"
                       src={current.videos[1]}
                       allowFullScreen
                     ></iframe>
+                    <p style={{ textAlign: 'center' }}>Card Selection</p>
                   </div>
                   <div className={styles.video_two}>
                     <iframe
@@ -59,6 +66,7 @@ const page = () => {
                       src={current.videos[2]}
                       allowFullScreen
                     ></iframe>
+                    <p style={{ textAlign: 'center' }}>Leaderboard</p>
                   </div>
                 </div>
               )}
@@ -68,10 +76,7 @@ const page = () => {
                 </div>
               )}
               {current.secondVideoTitle && (
-                <p
-                  id={index === 0 ? 'first' : ''}
-                  className={styles.second_heading}
-                >
+                <p className={styles.second_heading}>
                   {current.secondVideoTitle}
                 </p>
               )}

@@ -129,7 +129,6 @@ export const selectedWorksDataInDetail = [
       'https://player.vimeo.com/video/900335608?h=afe8c98934',
       'https://player.vimeo.com/video/900335477?h=ef45238179',
     ],
-    secondVideoTitle: 'Card Selection Ideation',
   },
   {
     name: 'Superhero Platform MVP',

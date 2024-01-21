@@ -54,9 +54,12 @@
         }
 
         .two_video_container {
+          flex: 1;
           display: flex;
-
           width: 100%;
+          margin: 0 auto;
+          justify-self: center;
+          align-self: center;
           .video_one {
             width: 30%;
             height: 600px;
@@ -95,7 +98,7 @@
         }
         .points {
           display: flex;
-          list-style: circle;
+          list-style: disc;
           flex-direction: column;
           max-width: 820px;
           align-self: flex-end;
@@ -382,6 +385,7 @@
 
           .two_video_container {
             display: flex;
+            margin: 0 auto;
             gap: 12px;
             width: 100%;
             .video_one {

@@ -111,7 +111,7 @@ const Page = () => {
             initial="initial"
             whileInView={'animate'}
             viewport={{ once: true }}
-            custom={2}
+            custom={4}
             className={styles.second}
           >
             I achieve impactful results <br />

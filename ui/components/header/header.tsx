@@ -4,6 +4,8 @@ import React, { useEffect, useState } from 'react';
 import styles from './Header.module.scss';
 import { MdContentCopy } from 'react-icons/md';
 import { usePathname } from 'next/navigation';
+import { motion } from 'framer-motion';
+import { basicFadeInVarianst } from '@/app/page';
 
 const Header = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -24,13 +26,17 @@ const Header = () => {
     <div className={styles.header_wrapper}>
       <div style={{ position: 'relative' }} className={styles.header_container}>
         {showPopup && (
-          <div
+          <motion.div
+            variants={basicFadeInVarianst}
+            initial="initial"
+            animate="animate"
             style={{
               padding: '8px 16px',
-              background: '#f1f1f1',
+              background: '#000000',
+              color: '#f1f1f1',
               position: 'absolute',
               zIndex: 100,
-              top: -40,
+              top: 50,
               borderRadius: 12,
               right: 50,
               fontSize: 16,
@@ -39,7 +45,7 @@ const Header = () => {
             }}
           >
             copied!!
-          </div>
+          </motion.div>
         )}
         <div className={styles.header_left}>
           <Link href="/" className={styles.logo}>

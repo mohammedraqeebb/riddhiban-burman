@@ -21,7 +21,7 @@
         font-family: GroteskMedium;
         display: flex;
         justify-content: space-between;
-        padding: 0px 200px;
+        padding: 0px 260px;
         font-size: 20px;
         align-items: center;
       }
@@ -191,6 +191,7 @@
       .position_container {
         text-transform: uppercase;
         display: flex;
+        flex: 0 0 auto;
         flex-direction: column;
         gap: 22px;
         .position {
@@ -198,14 +199,18 @@
           text-align: center;
           font-size: 150px;
           line-height: 0.8;
+          flex: 0 0 auto;
         }
         .experience_container {
           font-family: GroteskMedium;
+          width: 100%;
           display: flex;
           justify-content: space-between;
-          padding: 0px 200px;
-          font-size: 20px;
+          align-self: flex-start;
+          padding: 0 100px;
+          font-size: 18px;
           align-items: center;
+          flex: 0 0 auto;
         }
       }
       .image_container {
@@ -387,11 +392,12 @@
           line-height: 0.8;
         }
         .experience_container {
+          align-self: flex-start;
           font-family: GroteskMedium;
           display: flex;
           justify-content: space-between;
-          padding: 0px 20px;
-          font-size: 20px;
+          padding: 0px 40px;
+          font-size: 12px;
           align-items: center;
         }
       }
@@ -589,7 +595,7 @@
         flex-direction: column;
         gap: 130px;
         font-family: GroteskMedium;
-        font-size: 32px;
+        font-size: 28px;
         text-align: center;
         letter-spacing: -40;
         line-height: 0.8;
@@ -649,7 +655,8 @@
             }
             .right {
               font-family: GroteskMedium;
-              font-size: 16px;
+              font-size: 14px;
+              min-width: 120px;
             }
           }
         }
@@ -694,6 +701,7 @@
               flex-direction: column;
               justify-content: center;
               padding-bottom: 32px;
+              gap: 28px;
               text-align: center;
               border-bottom: 1px solid #888888;
               .details_container {
