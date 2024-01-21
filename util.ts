@@ -162,3 +162,30 @@ export const selectedWorksDataInDetail = [
     videos: ['https://player.vimeo.com/video/900334969?h=505dfe1934'],
   },
 ];
+
+export const fadeInVariants = {
+  initial: {
+    opacity: 0,
+    y: 20,
+  },
+  animate: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.1 * index,
+    },
+  }),
+};
+
+export const basicFadeInVarianst = {
+  initial: {
+    opacity: 0,
+  },
+  animate: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.1 * index,
+    },
+  }),
+};

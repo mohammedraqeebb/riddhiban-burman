@@ -2,35 +2,13 @@
 import styles from './styles.module.scss';
 import ProfileImage from '../assets/images/home_profile.png';
 import Image from 'next/image';
-import { experienceData, selectedWorksData } from '@/util';
+import {
+  basicFadeInVarianst,
+  experienceData,
+  fadeInVariants,
+  selectedWorksData,
+} from '@/util';
 import { motion } from 'framer-motion';
-
-export const fadeInVariants = {
-  initial: {
-    opacity: 0,
-    y: 20,
-  },
-  animate: (index: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: 0.1 * index,
-    },
-  }),
-};
-
-export const basicFadeInVarianst = {
-  initial: {
-    opacity: 0,
-  },
-  animate: (index: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: 0.1 * index,
-    },
-  }),
-};
 
 import Link from 'next/link';
 const position = ['senior', 'visual', 'designer'];
