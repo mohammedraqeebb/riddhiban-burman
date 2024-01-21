@@ -17,7 +17,17 @@ const page = () => {
     <div className={styles.page_wrapper}>
       <div className={styles.page_container}>
         <div className={styles.heading_container}>
-          <p className={styles.duration}>(2019-2023)</p>
+          <motion.p
+            className={styles.duration}
+            variants={basicFadeInVarianst}
+            initial="initial"
+            animate="animate"
+            whileInView={'animate'}
+            viewport={{ once: true }}
+            custom={2}
+          >
+            (2019-2023)
+          </motion.p>
           {heading.map((word, index) => (
             <motion.p
               className={styles.heading}
@@ -53,12 +63,29 @@ const page = () => {
                 ></iframe>
               </div>
 
-              <p className={styles.description}>{current.description}</p>
+              <motion.p
+                variants={basicFadeInVarianst}
+                initial="initial"
+                whileInView={'animate'}
+                viewport={{ once: true }}
+                custom={1}
+                className={styles.description}
+              >
+                {current.description}
+              </motion.p>
               <ul className={styles.points}>
-                {current.points.map((currentPoint) => (
-                  <li key={currentPoint} className={styles.point}>
+                {current.points.map((currentPoint, index) => (
+                  <motion.li
+                    key={index}
+                    className={styles.point}
+                    variants={fadeInVariants}
+                    initial="initial"
+                    whileInView={'animate'}
+                    viewport={{ once: true }}
+                    custom={index}
+                  >
                     {currentPoint}
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
               {current.videos.length === 2 && (
