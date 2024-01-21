@@ -45,6 +45,11 @@ const page = () => {
                     src={current.videos[1]}
                     allowFullScreen
                   ></iframe>
+                  {current.secondVideoTitle && (
+                    <p className={styles.second_heading}>
+                      {current.secondVideoTitle}
+                    </p>
+                  )}
                 </div>
               )}
               {current.videos.length === 3 && (
@@ -73,12 +78,8 @@ const page = () => {
               {index === 1 && (
                 <div className={styles.second_image_container}>
                   <Image src={Halloween} alt={current.name} />
+                  <p>stages for creating our halloween theme</p>
                 </div>
-              )}
-              {current.secondVideoTitle && (
-                <p className={styles.second_heading}>
-                  {current.secondVideoTitle}
-                </p>
               )}
             </div>
           ))}
