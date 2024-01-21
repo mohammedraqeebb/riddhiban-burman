@@ -1,6 +1,11 @@
+'use client';
 import React from 'react';
 import styles from './styles.module.scss';
-import { fadeInVariants, selectedWorksDataInDetail } from '@/util';
+import {
+  basicFadeInVarianst,
+  fadeInVariants,
+  selectedWorksDataInDetail,
+} from '@/util';
 import Halloween from '../../assets/images/halloween.png';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -30,7 +35,16 @@ const page = () => {
         <div className={styles.works_container}>
           {selectedWorksDataInDetail.map((current, index) => (
             <div key={current.name} className={styles.work_container}>
-              <p className={styles.work_heading}>{current.name}</p>
+              <motion.p
+                variants={basicFadeInVarianst}
+                initial="initial"
+                whileInView={'animate'}
+                viewport={{ once: true }}
+                custom={2}
+                className={styles.work_heading}
+              >
+                {current.name}
+              </motion.p>
               <div className={styles.video_container}>
                 <iframe
                   title="vimeo-player"
