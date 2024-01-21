@@ -207,7 +207,6 @@
 
       padding: 60px 60px 0px 60px;
       .image_container {
-        margin-right: 29px;
         width: 210px;
         height: 210px;
         img {
@@ -217,10 +216,11 @@
         }
       }
       .introduction_container {
-        margin-right: 60px;
         display: flex;
         flex-direction: column;
         text-align: center;
+        align-self: center;
+        margin: 0 auto;
 
         h2 {
           font-size: 32px;

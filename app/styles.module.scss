@@ -196,7 +196,7 @@
         .position {
           font-family: GilroyExtraBold;
           text-align: center;
-          font-size: 166px;
+          font-size: 150px;
           line-height: 0.8;
         }
         .experience_container {
@@ -368,8 +368,8 @@
   .page_wrapper {
     display: flex;
     justify-content: center;
-    max-width: 850px;
     .page_container {
+      max-width: 850px;
       padding: 0 20px;
       width: 100%;
       margin-top: 200px;
@@ -381,12 +381,10 @@
         flex-direction: column;
         gap: 22px;
         .position {
-          p {
-            font-family: GilroyExtraBold;
-            text-align: center;
-            font-size: 86px;
-            line-height: 0.8;
-          }
+          font-family: GilroyExtraBold;
+          text-align: center;
+          font-size: 90px;
+          line-height: 0.8;
         }
         .experience_container {
           font-family: GroteskMedium;

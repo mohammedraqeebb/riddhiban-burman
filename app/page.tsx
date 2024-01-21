@@ -1,43 +1,123 @@
+'use client';
 import styles from './styles.module.scss';
 import ProfileImage from '../assets/images/home_profile.png';
 import Image from 'next/image';
 import { experienceData, selectedWorksData } from '@/util';
+import { motion } from 'framer-motion';
+
+export const fadeInVariants = {
+  initial: {
+    opacity: 0,
+    y: 20,
+  },
+  animate: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.1 * index,
+    },
+  }),
+};
+
+export const basicFadeInVarianst = {
+  initial: {
+    opacity: 0,
+  },
+  animate: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.1 * index,
+    },
+  }),
+};
 
 import Link from 'next/link';
+const position = ['senior', 'visual', 'designer'];
+
 const Page = () => {
   return (
     <div className={styles.page_wrapper}>
       <div className={styles.page_container}>
         <div className={styles.position_container}>
-          <div className={styles.position}>
-            <p>senior</p>
-            <p>visual</p>
-            <p>Designer</p>
-          </div>
+          {position.map((word, index) => (
+            <motion.p
+              className={styles.position}
+              variants={fadeInVariants}
+              initial="initial"
+              animate="animate"
+              whileInView="animate"
+              key={word}
+              custom={index}
+            >
+              {word}
+            </motion.p>
+          ))}
+
           <div className={styles.experience_container}>
             <div>
-              <p>Currently brewing</p>
-              <p>experience at terra</p>
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.4 }}
+              >
+                Currently brewing
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.4 }}
+              >
+                experience at terra
+              </motion.p>
             </div>
             <div>
-              <p>(2021-present)</p>
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8 }}
+                whileInView={'animate'}
+              >
+                (2021-present)
+              </motion.p>
             </div>
           </div>
         </div>
 
-        <div className={styles.image_container}>
+        <motion.div
+          variants={basicFadeInVarianst}
+          initial="initial"
+          whileInView={'animate'}
+          viewport={{ once: true }}
+          custom={2}
+          className={styles.image_container}
+        >
           <Image src={ProfileImage} alt="" />
-        </div>
+        </motion.div>
         <div className={styles.self_container}>
-          <p className={styles.first}>
+          <motion.p
+            variants={basicFadeInVarianst}
+            initial="initial"
+            whileInView={'animate'}
+            viewport={{ once: true }}
+            custom={2}
+            className={styles.first}
+          >
             Passionate creating great
             <br /> experience for Digital <br /> Products
-          </p>
-          <p className={styles.second}>
+          </motion.p>
+          <motion.p
+            variants={basicFadeInVarianst}
+            initial="initial"
+            whileInView={'animate'}
+            viewport={{ once: true }}
+            custom={2}
+            className={styles.second}
+          >
             I achieve impactful results <br />
             through strategic thinking and <br />
             data-driven Insights.
-          </p>
+          </motion.p>
         </div>
         <div className={styles.records_wrapper}>
           <div className={styles.header_container}>
@@ -46,7 +126,15 @@ const Page = () => {
           </div>
           <div className={styles.records_container}>
             {experienceData.map((currentExperience, id) => (
-              <div key={id} className={styles.record_container}>
+              <motion.div
+                variants={fadeInVariants}
+                initial="initial"
+                whileInView="animate"
+                custom={id}
+                viewport={{ once: true }}
+                key={id}
+                className={styles.record_container}
+              >
                 <div className={styles.left}>
                   <p className={styles.company_name}>
                     {currentExperience.companyName}
@@ -61,7 +149,7 @@ const Page = () => {
                 <div className={styles.right}>
                   <p>{currentExperience.duration}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -72,7 +160,12 @@ const Page = () => {
           </div>
           <div className={styles.selected_works_container}>
             {selectedWorksData.map((curentWord, index) => (
-              <div
+              <motion.div
+                variants={fadeInVariants}
+                initial="initial"
+                whileInView="animate"
+                custom={index}
+                viewport={{ once: true }}
                 key={curentWord.name}
                 className={styles.selected_work_container}
               >
@@ -93,7 +186,7 @@ const Page = () => {
                     View
                   </Link>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

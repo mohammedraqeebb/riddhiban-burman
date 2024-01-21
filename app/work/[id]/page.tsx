@@ -3,6 +3,8 @@ import React from 'react';
 import styles from './styles.module.scss';
 import { useRouter } from 'next/navigation';
 import { selectedWorksDataInDetail } from '@/util';
+import Halloween from '../../../assets/images/halloween.png';
+import Image from 'next/image';
 
 const Page = ({ params }: { params: { id: string } }) => {
   const router = useRouter();
@@ -24,7 +26,13 @@ const Page = ({ params }: { params: { id: string } }) => {
               </p>
             ))}
           </div>
-          <div className={styles.video_container}></div>
+          <div className={styles.video_container}>
+            <iframe
+              title="vimeo-player"
+              src={current.videos[0]}
+              allowFullScreen
+            ></iframe>
+          </div>
           <p className={styles.description}>{current.description}</p>
           <ul className={styles.points}>
             {current.points.map((currentPoint) => (
@@ -33,6 +41,41 @@ const Page = ({ params }: { params: { id: string } }) => {
               </li>
             ))}
           </ul>
+          {current.videos.length === 2 && (
+            <div className={styles.video_container}>
+              <iframe
+                title="vimeo-player"
+                src={current.videos[1]}
+                allowFullScreen
+              ></iframe>
+            </div>
+          )}
+          {current.videos.length === 3 && (
+            <div className={styles.two_video_container}>
+              <div className={styles.video_one}>
+                <iframe
+                  title="vimeo-player"
+                  src={current.videos[1]}
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className={styles.video_two}>
+                <iframe
+                  title="vimeo-player"
+                  src={current.videos[2]}
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
+          )}
+          {id === '1' && (
+            <div className={styles.second_image_container}>
+              <Image src={Halloween} alt={current.name} />
+            </div>
+          )}
+          {current.secondVideoTitle && (
+            <p className={styles.second_heading}>{current.secondVideoTitle}</p>
+          )}
         </div>
       </div>
     </div>
