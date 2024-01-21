@@ -1,5 +1,5 @@
 'use client';
-import { cn } from '@/util';
+import { basicFadeInVarianst, cn } from '@/util';
 import React, { useEffect, useState } from 'react';
 import ProfileImage from '../../../assets/images/profile.png';
 import Image from 'next/image';
@@ -7,7 +7,7 @@ import styles from './Footer.module.scss';
 import { MdContentCopy } from 'react-icons/md';
 import { FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import { basicFadeInVarianst } from '@/app/page';
+
 import Link from 'next/link';
 
 const Footer = () => {

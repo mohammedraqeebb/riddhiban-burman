@@ -1,8 +1,11 @@
 import React from 'react';
 import styles from './styles.module.scss';
-import { selectedWorksDataInDetail } from '@/util';
+import { fadeInVariants, selectedWorksDataInDetail } from '@/util';
 import Halloween from '../../assets/images/halloween.png';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+
+const heading = ['Selected', 'Works'];
 
 const page = () => {
   return (
@@ -10,10 +13,19 @@ const page = () => {
       <div className={styles.page_container}>
         <div className={styles.heading_container}>
           <p className={styles.duration}>(2019-2023)</p>
-          <p className={styles.heading}>
-            Selected <br />
-            Works
-          </p>
+          {heading.map((word, index) => (
+            <motion.p
+              className={styles.heading}
+              variants={fadeInVariants}
+              initial="initial"
+              animate="animate"
+              whileInView="animate"
+              key={word}
+              custom={index}
+            >
+              {word}
+            </motion.p>
+          ))}
         </div>
         <div className={styles.works_container}>
           {selectedWorksDataInDetail.map((current, index) => (

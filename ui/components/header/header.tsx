@@ -5,7 +5,7 @@ import styles from './Header.module.scss';
 import { MdContentCopy } from 'react-icons/md';
 import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
-import { basicFadeInVarianst } from '@/app/page';
+import { basicFadeInVarianst } from '@/util';
 
 const Header = () => {
   const [showPopup, setShowPopup] = useState(false);
