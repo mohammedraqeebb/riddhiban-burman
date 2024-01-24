@@ -117,15 +117,17 @@ const Page = () => {
                   <p className={styles.company_name}>
                     {currentExperience.companyName}
                   </p>
-                  <p className={styles.position}>
-                    {currentExperience.position}
-                  </p>
+                  <div className={styles.pos_dur_container}>
+                    <p className={styles.position}>
+                      {currentExperience.position}
+                    </p>
+                    <p className={styles.duration}>
+                      {currentExperience.duration}
+                    </p>
+                  </div>
                   <p className={styles.description}>
                     {currentExperience.description}
                   </p>
-                </div>
-                <div className={styles.right}>
-                  <p>{currentExperience.duration}</p>
                 </div>
               </motion.div>
             ))}
