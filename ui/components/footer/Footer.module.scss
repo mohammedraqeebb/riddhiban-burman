@@ -77,10 +77,12 @@
           display: flex;
           gap: 16px;
           align-items: center;
-          p {
+          flex-direction: row;
+          a {
             display: flex;
             gap: 4px;
             align-items: center;
+            justify-content: center;
           }
         }
       }
@@ -383,10 +385,12 @@
             display: flex;
             gap: 16px;
             align-items: center;
+            flex-direction: row;
             a {
               display: flex;
               gap: 4px;
               align-items: center;
+              flex-direction: row;
             }
           }
         }

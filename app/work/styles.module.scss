@@ -85,6 +85,11 @@
             width: 100%;
             height: 100%;
           }
+          p {
+            font-family: GroteskMedium;
+            font-size: 20px;
+            text-align: center;
+          }
         }
         .second_heading {
           font-family: GroteskMedium;
@@ -192,10 +197,11 @@
             }
           }
           .second_image_container {
-            max-width: 800px;
+            max-width: 90%;
             img {
               width: 100%;
               height: 100%;
+              object-fit: contain;
             }
           }
 
@@ -297,8 +303,7 @@
             }
           }
           .second_image_container {
-            width: 90%;
-            height: 756px;
+            max-width: 90%;
             align-self: center;
             img {
               width: 100%;
@@ -432,9 +437,8 @@
             }
           }
           .second_image_container {
-            max-width: 350px;
-            width: 100%;
-            height: 200px;
+            max-width: 95%;
+
             margin-top: 24px;
 
             align-self: center;

@@ -129,7 +129,10 @@ const page = () => {
                 </div>
               )}
               {index === 1 && (
-                <div className={styles.second_image_container}>
+                <div
+                  className={styles.second_image_container}
+                  style={{ marginTop: 24 }}
+                >
                   <Image src={Halloween} alt={current.name} />
                   <p>stages for creating our halloween theme</p>
                 </div>

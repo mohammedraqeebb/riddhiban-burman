@@ -2,9 +2,14 @@
 import React from 'react';
 import styles from './styles.module.scss';
 import { useRouter } from 'next/navigation';
-import { selectedWorksDataInDetail } from '@/util';
+import {
+  basicFadeInVarianst,
+  fadeInVariants,
+  selectedWorksDataInDetail,
+} from '@/util';
 import Halloween from '../../../assets/images/halloween.png';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const Page = ({ params }: { params: { id: string } }) => {
   const router = useRouter();
@@ -21,9 +26,19 @@ const Page = ({ params }: { params: { id: string } }) => {
         <div key={current.name} className={styles.work_container}>
           <div className={styles.work_heading_container}>
             {splitHeading.map((word) => (
-              <p className={styles.work_heading} key={word}>
+              <motion.p
+                variants={fadeInVariants}
+                initial="initial"
+                animate="animate"
+                whileInView={'animate'}
+                viewport={{ once: true }}
+                custom={2}
+                className={styles.work_heading}
+                key={word}
+                style={{ marginBottom: 48 }}
+              >
                 {word}
-              </p>
+              </motion.p>
             ))}
           </div>
           <div className={styles.video_container}>
@@ -33,12 +48,30 @@ const Page = ({ params }: { params: { id: string } }) => {
               allowFullScreen
             ></iframe>
           </div>
-          <p className={styles.description}>{current.description}</p>
+          <motion.p
+            variants={basicFadeInVarianst}
+            initial="initial"
+            animate="animate"
+            whileInView={'animate'}
+            viewport={{ once: true }}
+            custom={2}
+            className={styles.description}
+          >
+            {current.description}
+          </motion.p>
           <ul className={styles.points}>
-            {current.points.map((currentPoint) => (
-              <li key={currentPoint} className={styles.point}>
+            {current.points.map((currentPoint, index) => (
+              <motion.li
+                variants={fadeInVariants}
+                initial="initial"
+                animate="animate"
+                whileInView="animate"
+                custom={index}
+                key={currentPoint}
+                className={styles.point}
+              >
                 {currentPoint}
-              </li>
+              </motion.li>
             ))}
           </ul>
           {current.videos.length === 2 && (
@@ -48,6 +81,11 @@ const Page = ({ params }: { params: { id: string } }) => {
                 src={current.videos[1]}
                 allowFullScreen
               ></iframe>
+              {current.secondVideoTitle && (
+                <p className={styles.second_heading}>
+                  {current.secondVideoTitle}
+                </p>
+              )}
             </div>
           )}
           {current.videos.length === 3 && (
@@ -58,6 +96,7 @@ const Page = ({ params }: { params: { id: string } }) => {
                   src={current.videos[1]}
                   allowFullScreen
                 ></iframe>
+                <p style={{ textAlign: 'center' }}>Card Selection</p>
               </div>
               <div className={styles.video_two}>
                 <iframe
@@ -65,16 +104,19 @@ const Page = ({ params }: { params: { id: string } }) => {
                   src={current.videos[2]}
                   allowFullScreen
                 ></iframe>
+                <p style={{ textAlign: 'center' }}>Leaderboard</p>
               </div>
             </div>
           )}
+
           {id === '1' && (
-            <div className={styles.second_image_container}>
+            <div
+              className={styles.second_image_container}
+              style={{ marginTop: 24 }}
+            >
               <Image src={Halloween} alt={current.name} />
+              <p>stages for creating our halloween theme</p>
             </div>
-          )}
-          {current.secondVideoTitle && (
-            <p className={styles.second_heading}>{current.secondVideoTitle}</p>
           )}
         </div>
       </div>
