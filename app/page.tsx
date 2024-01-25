@@ -133,7 +133,10 @@ const Page = () => {
             ))}
           </div>
         </div>
-        <div className={styles.selected_works_wrapper}>
+        <div
+          style={{ marginBottom: 36 }}
+          className={styles.selected_works_wrapper}
+        >
           <div className={styles.header_container}>
             <p> Selected</p>
             <p> Works</p>
@@ -154,7 +157,15 @@ const Page = () => {
                 </div>
                 <div className={styles.details_wrapper}>
                   <div className={styles.details_container}>
-                    <p className={styles.name}>{curentWord.name}</p>
+                    <div className={styles.name_view_container}>
+                      <p className={styles.name}>{curentWord.name}</p>
+                      <Link
+                        className={styles.view_button}
+                        href={`work/${index}`}
+                      >
+                        View
+                      </Link>
+                    </div>
                     <p className={styles.sub_heading}>
                       {curentWord.subheading}
                     </p>
@@ -162,7 +173,7 @@ const Page = () => {
                       {curentWord.description}
                     </p>
                   </div>
-                  <Link href={`/work/${index}`} className={styles.view_button}>
+                  <Link className={styles.view_button} href={`work/${index}`}>
                     View
                   </Link>
                 </div>
