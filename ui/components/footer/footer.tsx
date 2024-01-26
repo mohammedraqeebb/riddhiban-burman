@@ -24,30 +24,6 @@ const Footer = () => {
   return (
     <div className={styles.footer_wrapper}>
       <div className={styles.footer_container} style={{ position: 'relative' }}>
-        {showPopup && (
-          <motion.div
-            variants={basicFadeInVarianst}
-            initial="initial"
-            animate="animate"
-            style={{
-              padding: '8px 16px',
-              background: '#f1f1f1',
-              color: '#000000',
-              border: '1px solid #000000',
-              position: 'absolute',
-              zIndex: 100,
-              bottom: 80,
-              right: 40,
-              borderRadius: 12,
-
-              fontSize: 16,
-
-              transition: 'all .3s ease-in',
-            }}
-          >
-            copied!!
-          </motion.div>
-        )}
         <div className={styles.image_container}>
           <Image src={ProfileImage} alt="" />
         </div>
@@ -61,7 +37,34 @@ const Footer = () => {
             <p>Think I&apos;d be a good fit for your team or project?</p>
             <p>Lets Connect.</p>
           </div>
-          <div className={styles.email_container}>
+          <div
+            className={styles.email_container}
+            style={{ position: 'relative' }}
+          >
+            {showPopup && (
+              <motion.div
+                variants={basicFadeInVarianst}
+                initial="initial"
+                animate="animate"
+                style={{
+                  padding: '8px 16px',
+                  background: '#f1f1f1',
+                  color: '#000000',
+                  border: '1px solid #000000',
+                  position: 'absolute',
+                  zIndex: 100,
+                  top: 48,
+                  right: 8,
+                  borderRadius: 12,
+
+                  fontSize: 16,
+
+                  transition: 'all .3s ease-in',
+                }}
+              >
+                copied!!
+              </motion.div>
+            )}
             <p className={styles.email}>riddhibanburman1@gmail.com</p>
             <span onClick={handleClick}>
               <MdContentCopy color="#888888" />

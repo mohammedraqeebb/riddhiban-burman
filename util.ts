@@ -60,7 +60,7 @@ export const selectedWorksData = [
     name: 'Platform Design ',
     subheading: 'Game Platform Ux Flow',
     description:
-      'Leading a team of Unity artist and Visual designers to create appealing 3d setup for Terra Games Studio.',
+      'Contribute to the creation of a gaming platform aimed at fostering healthy competition among kids.',
     imgURl: PlatformDesign,
   },
   {

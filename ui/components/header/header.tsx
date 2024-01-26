@@ -53,13 +53,21 @@ const Header = () => {
           </Link>
           <Link
             href="/"
-            style={{ color: !path.includes('work') ? '#000000' : '#888888' }}
+            style={{
+              color: !path.includes('work') ? '#000000' : '#888888',
+              paddingBottom: 2,
+              borderBottom: !path.includes('work') ? '1px solid #000000' : '',
+            }}
           >
             ABOUT
           </Link>
           <Link
             href="/work"
-            style={{ color: path.includes('work') ? '#000000' : '#888888' }}
+            style={{
+              color: path.includes('work') ? '#000000' : '#888888',
+              paddingBottom: 2,
+              borderBottom: path.includes('work') ? '1px solid #000000' : '',
+            }}
           >
             WORK
           </Link>

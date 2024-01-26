@@ -161,6 +161,7 @@
                 .name {
                   font-family: GroteskSemiBold;
                   font-size: 60px;
+                  line-height: 0.9;
                 }
                 .view_button {
                   justify-self: flex-end;
@@ -613,6 +614,8 @@
                   font-family: GroteskMedium;
                   font-size: 18px;
                   color: #888888;
+                  text-align: center;
+                  min-width: 100%;
                 }
               }
               .view_button {
