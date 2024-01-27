@@ -24,23 +24,16 @@ const Page = ({ params }: { params: { id: string } }) => {
     <div className={styles.page_wrapper}>
       <div className={styles.page_container}>
         <div key={current.name} className={styles.work_container}>
-          <div className={styles.work_heading_container}>
-            {splitHeading.map((word) => (
-              <motion.p
-                variants={fadeInVariants}
-                initial="initial"
-                animate="animate"
-                whileInView={'animate'}
-                viewport={{ once: true }}
-                custom={2}
-                className={styles.work_heading}
-                key={word}
-                style={{ marginBottom: 48 }}
-              >
-                {word}
-              </motion.p>
-            ))}
-          </div>
+          <motion.p
+            variants={basicFadeInVarianst}
+            initial="initial"
+            whileInView={'animate'}
+            viewport={{ once: true }}
+            custom={2}
+            className={styles.work_heading}
+          >
+            {current.name}
+          </motion.p>
           <div className={styles.video_container}>
             <iframe
               title="vimeo-player"
@@ -48,13 +41,13 @@ const Page = ({ params }: { params: { id: string } }) => {
               allowFullScreen
             ></iframe>
           </div>
+
           <motion.p
             variants={basicFadeInVarianst}
             initial="initial"
-            animate="animate"
             whileInView={'animate'}
             viewport={{ once: true }}
-            custom={2}
+            custom={1}
             className={styles.description}
           >
             {current.description}
@@ -62,20 +55,20 @@ const Page = ({ params }: { params: { id: string } }) => {
           <ul className={styles.points}>
             {current.points.map((currentPoint, index) => (
               <motion.li
+                key={index}
+                className={styles.point}
                 variants={fadeInVariants}
                 initial="initial"
-                animate="animate"
-                whileInView="animate"
+                whileInView={'animate'}
+                viewport={{ once: true }}
                 custom={index}
-                key={currentPoint}
-                className={styles.point}
               >
                 {currentPoint}
               </motion.li>
             ))}
           </ul>
           {current.videos.length === 2 && (
-            <div className={styles.video_container}>
+            <div className={styles.video_container} style={{ marginTop: 72 }}>
               <iframe
                 title="vimeo-player"
                 src={current.videos[1]}
@@ -89,7 +82,10 @@ const Page = ({ params }: { params: { id: string } }) => {
             </div>
           )}
           {current.videos.length === 3 && (
-            <div className={styles.two_video_container}>
+            <div
+              style={{ marginTop: 72 }}
+              className={styles.two_video_container}
+            >
               <div className={styles.video_one}>
                 <iframe
                   title="vimeo-player"
@@ -108,7 +104,6 @@ const Page = ({ params }: { params: { id: string } }) => {
               </div>
             </div>
           )}
-
           {id === '1' && (
             <div
               className={styles.second_image_container}
